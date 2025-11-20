@@ -1,11 +1,2068 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sustainable Living & Eco-Friendly Practices</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="preload" href="https://images.unsplash.com/photo-1491146179969-d674118945ff?fm=webp&q=70&w=1600" as="image">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
 
-        </style>
-    </head>
-    <body>
-        
-    </body>
+  body {
+    background-image: url('https://images.unsplash.com/photo-1491146179969-d674118945ff?fm=webp&q=70&w=1600');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    position: relative;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: -1;
+  }
+
+  header {
+    position: relative;
+    background-color: rgba(76, 175, 80, 0.8);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 4px solid #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+  }
+
+  header * {
+    position: relative;
+    z-index: 1;
+  }
+
+  header h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+
+  header p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-top: 10px;
+  }
+
+  nav.navbar {
+    z-index: 1000;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .navbar.scrolled {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  body.dark-mode .navbar {
+    background-color: #2e7d32 !important;
+  }
+
+  body.dark-mode .navbar.scrolled {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-link {
+    transition: color 0.3s ease;
+  }
+
+  section {
+    padding: 80px 20px;
+    margin-bottom: 50px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #4CAF50;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .section-description {
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.6;
+    margin-top: 15px;
+  }
+
+  .intro-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .card {
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #4CAF50;
+  }
+
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  .card-section {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+
+  .btn-primary {
+    background-color: #4CAF50;
+    border: none;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #388E3C;
+  }
+
+  footer {
+    background-color: rgba(76, 175, 80, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .dark-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+
+  body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+
+  body.dark-mode header,
+  body.dark-mode footer {
+    background-color: rgba(60, 60, 60, 0.9) !important;
+  }
+
+  body.dark-mode .card {
+    background-color: #222;
+    color: #eee;
+    border-color: #444;
+  }
+
+  body.dark-mode .section-title,
+  body.dark-mode .section-description,
+  body.dark-mode .intro-box,
+  body.dark-mode .card-section {
+    background-color: #1e1e1e;
+    color: #ddd;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+  }
+
+  body.dark-mode .btn-primary {
+    background-color: #66bb6a;
+    color: #fff;
+  }
+
+  body.dark-mode .btn-primary:hover {
+    background-color: #43a047;
+  }
+
+  body.dark-mode .modal-content {
+    background-color: #2c2c2c;
+    color: #eee;
+  }
+
+  body.dark-mode .modal-header,
+  body.dark-mode .modal-footer {
+    border-color: #444;
+  }
+
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2.4rem;
+    }
+
+    .section-title {
+      font-size: 2.2rem;
+    }
+
+    .section-description {
+      font-size: 1.1rem;
+    }
+
+    .card-body {
+      padding: 15px;
+    }
+
+    .btn-primary {
+      font-size: 1rem;
+      padding: 8px 16px;
+    }
+    .modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+  transform: translateY(-30px);
+}
+.modal.show .modal-dialog {
+  transform: translateY(0);
+}
+
+  }
+</style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="70" tabindex="0">
+  <button class="dark-toggle" aria-label="Toggle dark mode">
+    <i class="bi bi-moon-fill"></i>
+  </button>
+
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark bg-success sticky-top shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Sustainable Living</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#introduction">Intro</a></li>
+          <li class="nav-item"><a class="nav-link" href="#direction">Get Started</a></li>
+          <li class="nav-item"><a class="nav-link" href="#eco-home">Eco-Friendly Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#green-fashion">Sustainable Fashion</a></li>
+          <li class="nav-item"><a class="nav-link" href="#eco-shop">Eco Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#diy-projects">DIY Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#interactive-tools">Interactive Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Articles</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="#newsletter">Newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+    </div>
+  </nav>
+
+  <header>
+    <h1>Sustainable Living & Eco-Friendly Practices</h1>
+    <p>Make the world a greener place, one step at a time.</p>
+  </header>
+
+  <section id="introduction" class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="section-title" data-aos="fade-up">Welcome to Sustainable Living!</h2>
+        <div class="intro-box" data-aos="fade-up" data-aos-delay="100">
+          <p class="section-description">Living sustainably is about making mindful choices that reduce your environmental impact. Whether it's your home, your food choices, or your mode of transportation, each action you take helps create a healthier planet for future generations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="direction" class="container">
+  <h2 class="section-title" data-aos="fade-up">Getting Started with Sustainable Living</h2>
+  <div class="card-section" data-aos="fade-up" data-aos-delay="100">
+    <p class="section-description">New to sustainable living? Here's a simple path to help you begin your journey toward a more eco-friendly lifestyle:</p>
+    <ul class="list-group list-group-flush mt-4">
+      <li class="list-group-item"><strong>1. Assess Your Habits:</strong> Start with a carbon footprint calculator to understand your impact.</li>
+      <li class="list-group-item"><strong>2. Make Small Swaps:</strong> Choose reusable items, buy second-hand, and avoid single-use plastics.</li>
+      <li class="list-group-item"><strong>3. Focus on Food:</strong> Opt for local, seasonal produce and reduce food waste.</li>
+      <li class="list-group-item"><strong>4. Green Your Commute:</strong> Walk, bike, or use public transport more often.</li>
+      <li class="list-group-item"><strong>5. Learn Continuously:</strong> Explore our blog, quiz, and resources section to expand your knowledge.</li>
+    </ul>
+    <div class="text-center mt-4">
+      <a href="#interactive-tools" class="btn btn-primary">
+  <i class="bi bi-compass-fill me-2"></i>Explore Tools
+</a>
+
+    </div>
+  </div>
+</section>
+
+<section id="eco-home" class="container">
+  <h2 class="section-title" data-aos="fade-up">Eco-Friendly Home</h2>
+  <div class="row">
+    <!-- Energy Efficient Living -->
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="card">
+        <img src="https://d251cvb8f7e7p0.cloudfront.net/images/Article_Images/ImageForArticle_8466_16412982977661622.jpg" class="card-img-top" alt="Energy Efficient Home">
+        <div class="card-body">
+          <h5 class="card-title">Energy Efficient Living</h5>
+          <p class="card-text">Transform your living space into an eco-friendly haven with tips on reducing energy use and improving insulation.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#energyModal">
+            <i class="bi bi-lightbulb-fill me-2"></i>Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sustainable Food Choices -->
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="card">
+        <img src="https://st2.depositphotos.com/7228730/12297/i/450/depositphotos_122970194-stock-photo-young-attractive-woman-on-a.jpg" class="card-img-top" alt="Sustainable Food">
+        <div class="card-body">
+          <h5 class="card-title">Sustainable Food Choices</h5>
+          <p class="card-text">Support your health and the planet by choosing local, seasonal, and plant-based foods.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#foodModal">
+            <i class="bi bi-basket me-2"></i>Discover More
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Green Transportation -->
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+      <div class="card">
+        <img src="https://media.istockphoto.com/id/1066484026/photo/electric-bus-illustration-urban-ecology-green-concept.jpg?s=612x612&w=0&k=20&c=F_ICqMAMuOMTDJSy5WFE_5-_YseY4g41BY9zQznWX_Y=" class="card-img-top" alt="Green Transportation">
+        <div class="card-body">
+          <h5 class="card-title">Green Transportation</h5>
+          <p class="card-text">Choose sustainable transport like EVs, public transit, or biking to reduce your footprint.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#transportModal">
+            <i class="bi bi-bicycle me-2"></i>Explore Options
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Energy Efficient Modal -->
+<div class="modal fade" id="energyModal" tabindex="-1" aria-labelledby="energyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="energyModalLabel">Energy Efficient Living</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4 py-3 modal-text">
+        <p>Transforming your home into an energy-efficient space is one of the most impactful actions you can take to live more sustainably. Not only does it reduce your carbon footprint and reliance on fossil fuels, but it also results in significant cost savings over time. This section introduces practical and affordable ways to make your home more eco-conscious, whether you’re a homeowner, renter, or just looking to make smarter energy choices.</p>
+
+  <p>Start by improving insulation—sealing windows and doors, insulating attics and basements, and using heavy curtains can drastically reduce heat loss. Upgrade to energy-efficient LED lighting and Energy Star-rated appliances to cut electricity consumption without sacrificing performance. Smart thermostats and programmable lighting systems can help automate and optimize energy use based on your daily routine.</p>
+
+  <p>Consider transitioning to renewable energy sources like solar panels, wind turbines (if feasible), or subscribing to green energy programs offered by your utility provider. Even small changes like air-drying clothes, using cold water for laundry, and installing low-flow faucets and showerheads make a meaningful difference.</p>
+
+  <p>Water conservation is another crucial aspect of energy-efficient living. Install rain barrels, use drought-resistant landscaping (xeriscaping), and avoid watering lawns during peak sunlight hours. By thinking of energy as a shared resource, each action contributes to a larger environmental impact.</p>
+
+  <p><strong>Bonus Tip:</strong> Conduct a DIY or professional home energy audit to identify areas of energy waste and prioritize improvements with the greatest payoff.</p>
+
+  <p><strong>Why It Matters:</strong> Energy-efficient homes are not only better for the planet—they're healthier and more resilient. Lower energy use means fewer greenhouse gas emissions, reduced air pollution, and a more comfortable living environment year-round.</p>
+
+  <p><strong>Takeaway:</strong> Every choice you make at home—big or small—can steer us toward a more sustainable future. Start where you are, use what you have, and build a home that reflects both eco-conscious values and long-term savings.</p>
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Food Choices Modal -->
+<div class="modal fade" id="foodModal" tabindex="-1" aria-labelledby="foodModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="foodModalLabel">Sustainable Food Choices</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4 py-3 modal-text">
+         <p>The way we grow, transport, and consume food has a profound impact on the planet. Making sustainable food choices is a powerful way to lower your environmental footprint while nourishing your body with fresh, wholesome ingredients. This section explores how to align your eating habits with eco-friendly principles—without sacrificing taste or convenience.</p>
+
+  <p>Begin by prioritizing local, seasonal produce. Buying from local farmers’ markets or joining a CSA (Community Supported Agriculture) not only reduces the carbon emissions associated with long-distance transportation but also supports small-scale agriculture. Seasonal eating ensures you're consuming foods at their nutritional peak while minimizing the need for resource-heavy growing methods like artificial heating or pesticides.</p>
+
+  <p>Choosing organic and minimally processed foods reduces exposure to harmful chemicals and supports regenerative farming practices that restore soil health and biodiversity. Shifting toward plant-based meals—even a few times a week—can drastically cut greenhouse gas emissions, conserve water, and reduce deforestation caused by animal agriculture.</p>
+
+  <p>Food waste is another major concern. Plan meals ahead, store leftovers properly, and get creative with ingredients nearing expiration. Composting food scraps also helps close the waste loop and returns nutrients to the soil.</p>
+
+  <p>Eco-friendly cooking methods—like using energy-efficient appliances, cooking in batches, or choosing raw meals—can also reduce your kitchen’s energy use. Even small actions, like bringing your own containers for takeout or avoiding single-use packaging, help shift the food system in a sustainable direction.</p>
+
+  <p><strong>Why It Matters:</strong> Our food choices affect everything from climate change to ocean health to wildlife conservation. By eating sustainably, you're voting for a food system that prioritizes people and the planet over profit and pollution.</p>
+
+  <p><strong>Takeaway:</strong> Sustainable eating isn’t about perfection—it’s about making mindful, delicious choices that nourish both your health and the earth. Every meal is a chance to support a greener future.</p>
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Transportation Modal -->
+<div class="modal fade" id="transportModal" tabindex="-1" aria-labelledby="transportModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="transportModalLabel">Green Transportation</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body px-4 py-3 modal-text">
+        <p>Transportation is one of the largest contributors to global greenhouse gas emissions. Fortunately, there are many sustainable alternatives that can help reduce your environmental impact while promoting cleaner air, improved health, and cost savings. In this section, we’ll explore a range of green transportation methods and how they can become a part of your everyday routine.</p>
+
+  <p><strong>Electric Vehicles (EVs):</strong> Modern EVs produce zero tailpipe emissions and are becoming increasingly affordable. Charging your vehicle with renewable energy further reduces your impact. Government incentives, expanding charging infrastructure, and improved battery life make EVs an accessible option for more people than ever before.</p>
+
+  <p><strong>Public Transit:</strong> Buses, trains, and subways drastically reduce emissions per person compared to individual car use. Using public transportation also helps reduce traffic congestion and urban pollution. Many cities are investing in electric buses and expanding networks to encourage greener commuting.</p>
+
+  <p><strong>Biking and Walking:</strong> Short trips account for a significant percentage of car use. Replacing these with bike rides or walks not only reduces emissions but also boosts your physical and mental health. Bike-sharing programs and pedestrian-friendly infrastructure make this easier in urban areas.</p>
+
+  <p><strong>Carpooling and Ridesharing:</strong> When driving is necessary, sharing rides with coworkers or using apps that connect you with others traveling in the same direction can significantly cut down on fuel use and emissions.</p>
+
+  <p>Additionally, consider remote work or flexible schedules where possible. Reducing your daily commute even a few days a week has long-term positive effects on both the environment and your personal well-being.</p>
+
+  <p><strong>Why It Matters:</strong> Transportation accounts for over 25% of global CO₂ emissions. Shifting to sustainable travel methods not only slows climate change but also reduces noise pollution, improves public health, and decreases dependence on fossil fuels.</p>
+
+  <p><strong>Takeaway:</strong> Every mile matters. Whether you switch to an EV, hop on a bike, or take the train, you're contributing to a greener, cleaner, and more livable planet.</p>
+</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section id="green-fashion" class="container">
+  <h2 class="section-title" data-aos="fade-up">Sustainable Fashion</h2>
+  <div class="card-section mb-4" data-aos="fade-up" data-aos-delay="100">
+    <p class="section-description">
+  Fashion is a powerful form of self-expression—but it can also be a force for good. Sustainable fashion invites us to rethink our wardrobes, embracing choices that honor the planet and the people who make our clothes. From eco-conscious fabrics and ethical production practices to second-hand treasures and circular design, this section guides you through how to dress with intention. Discover how you can stay stylish while reducing waste, conserving resources, and supporting brands that care about transparency, fairness, and the future of our world.
+</p>
+
+  </div>
+
+  <div class="row" data-aos="fade-up" data-aos-delay="200">
+    <!-- Card 1: Eco-Friendly Fabrics -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <img src="https://www.fabricmill.com/media/catalog/product/cache/98b56e05ca7a67252091234e9457e126/2/5/250543_4sm.jpg">
+        <div class="card-body">
+          <h5 class="card-title"><i class="bi bi-tree me-2 text-success colour-success"></i>Eco-Friendly Fabrics</h5>
+          <p class="card-text">
+            Fabrics like organic cotton, hemp, and bamboo are gentle on your skin and the planet. These materials are grown sustainably, require less water, and decompose naturally.
+          </p>
+          <p class="text-muted small">
+            Want to know which fabric is best for you and why synthetic blends are harmful?
+          </p>
+          <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalFashion1">
+            <i class="bi bi-book"></i> Explore Fabric Guide
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Slow Fashion -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <img src="https://discover.certilogo.com/cdn/shop/articles/featuredImage800x800_4dc629c7-fde7-4486-8e85-a6f05d9ee043.jpg?v=1677058996" class="card-img-top" alt="Slow Fashion">
+        <div class="card-body">
+          <h5 class="card-title"><i class="bi bi-clock-history me-2"></i>Slow Fashion</h5>
+          <p class="card-text">
+            Slow fashion is all about mindfulness—supporting ethical brands, buying quality over quantity, and caring for what you wear to reduce waste and exploitation.
+          </p>
+          <p class="text-muted small">
+            Curious how to transition away from fast fashion and build a timeless wardrobe?
+          </p>
+          <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalFashion2">
+            <i class="bi bi-lightbulb"></i> Learn How to Start
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Second-Hand Style -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <img src="https://cdn.shopify.com/s/files/1/0079/4899/2567/files/5_49c1f6fb-b636-4dc6-9d43-e9d32c6aa114_480x480.png?v=1681335020" class="card-img-top" alt="Second-Hand Style">
+        <div class="card-body">
+          <h5 class="card-title"><i class="bi bi-bag-heart me-2"></i>Second-Hand Style</h5>
+          <p class="card-text">
+            Thrift shopping, clothing swaps, and upcycling are fun and fashionable ways to reduce textile waste and discover one-of-a-kind pieces that reflect your personality.
+          </p>
+          <p class="text-muted small">
+            Want tips for thrifting like a pro or making old clothes new again?
+          </p>
+          <button class="btn btn-success btn-sm mt-2" data-bs-toggle="modal" data-bs-target="#modalFashion3">
+            <i class="bi bi-scissors"></i> Get Styling Tips
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Modal 1: Eco-Friendly Fabrics -->
+<div class="modal fade" id="modalFashion1" tabindex="-1" aria-labelledby="modalFashion1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFashion1Label"><i class="bi bi-leaf me-2"></i>Eco-Friendly Fabrics</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+  <p>When it comes to sustainable fashion, fabric selection plays a pivotal role. The textiles we wear affect not just our comfort but also the environment—through water usage, chemical treatments, energy consumption, and biodegradability. Choosing eco-conscious materials is a powerful way to reduce fashion’s environmental footprint while supporting more ethical industry practices.</p>
+  <p>Below are some of the most sustainable fabric choices and what makes them better for people and the planet:</p>
+  <ul>
+    <li><strong>Organic Cotton:</strong> Unlike conventional cotton, which is heavily reliant on synthetic pesticides and fertilizers, organic cotton is grown using natural methods that protect soil health and biodiversity. It is gentle on sensitive skin, breathable, and completely biodegradable—making it a top choice for everyday wear.</li>
+    <li><strong>Hemp:</strong> A true powerhouse in sustainable agriculture. Hemp grows rapidly without the need for herbicides or pesticides, uses far less water than cotton, and actually nourishes the soil. Its fibers are strong and durable, making hemp garments long-lasting while aging gracefully over time.</li>
+    <li><strong>Bamboo:</strong> Known for its soft texture and antibacterial properties, bamboo is a renewable resource that grows abundantly. However, not all bamboo fabrics are created equal. Look for bamboo linen or mechanically processed bamboo rather than rayon derived from chemical-intensive processes.</li>
+    <li><strong>Tencel™ (Lyocell):</strong> Produced from sustainably harvested wood pulp, Tencel uses a closed-loop system that recycles almost all water and solvents. The result is a silky, breathable, and biodegradable fabric that’s ideal for everything from formalwear to loungewear.</li>
+    <li><strong>Recycled Materials:</strong> Fabrics made from post-consumer waste, such as recycled polyester (rPET), divert plastic bottles and textiles from landfills and oceans. These materials reduce reliance on virgin petroleum and often require less energy and water to produce.</li>
+  </ul>
+  <p>✔ For true sustainability, always check for independent certifications that validate the environmental and ethical standards of the fabric:</p>
+  <ul>
+    <li><strong>GOTS (Global Organic Textile Standard):</strong> Ensures fabrics meet strict organic farming and social responsibility criteria.</li>
+    <li><strong>OEKO-TEX® Standard 100:</strong> Tests textiles for harmful substances to protect human health.</li>
+    <li><strong>Fair Trade Certified™:</strong> Promotes better wages and working conditions for garment workers worldwide.</li>
+  </ul>
+  <p><strong>Bottom Line:</strong> What your clothing is made of matters. By prioritizing eco-conscious fabrics, you reduce harm to the planet and support the development of a cleaner, more humane fashion industry.</p>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2: Slow Fashion -->
+<div class="modal fade" id="modalFashion2" tabindex="-1" aria-labelledby="modalFashion2Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFashion2Label"><i class="bi bi-clock-history me-2"></i>Slow Fashion</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+  <p>Slow fashion is a movement that reimagines the way we engage with clothing. It’s not just about consuming less—it’s about consuming with care, valuing quality over quantity, and embracing long-term thinking in a culture of instant gratification. In contrast to the high-speed, high-waste nature of fast fashion, slow fashion encourages a deeper connection to the garments we wear and the systems that produce them.</p>
+  <p>This approach fosters ethical production, local craftsmanship, and environmental responsibility—reminding us that fashion can be beautiful, meaningful, and sustainable.</p>
+  <h6>Key Pillars of Slow Fashion</h6>
+  <ul>
+    <li><strong>Intentional Purchasing:</strong> Shift your mindset from impulse buys to thoughtful investments. Ask questions before purchasing—Who made this? What is it made of? Will I truly use and enjoy it?</li>
+    <li><strong>Transparency and Ethics:</strong> Support brands that are open about their labor practices, sourcing, and environmental impact. Ethical production should be the standard, not the exception.</li>
+    <li><strong>Timeless Design:</strong> Focus on styles that outlast trends—neutral tones, flattering fits, and versatile silhouettes. Clothes that never go out of style reduce waste and increase value per wear.</li>
+    <li><strong>Care and Longevity:</strong> Learn simple skills like sewing on a button, repairing seams, or re-dyeing faded garments. Proper care—including washing in cold water, air-drying, and storing garments well—can double the lifespan of your clothes.</li>
+  </ul>
+  <h6>Mindful Shopping Habits</h6>
+  <ul>
+    <li><strong>The 30 Wears Rule:</strong> Before buying an item, ask yourself: Will I wear this at least 30 times? If not, reconsider.</li>
+    <li><strong>Capsule Wardrobes:</strong> Build a compact, versatile wardrobe with high-quality essentials that mix and match effortlessly.</li>
+    <li><strong>Seasonal Audits:</strong> Revisit your closet regularly to rotate, repair, and repurpose what you already own.</li>
+  </ul>
+  <p><strong>Slow fashion is not about minimalism or austerity—it’s about reconnecting with the true value of clothing. When you buy less and choose better, you make room for style that endures, supports ethical labor, and respects planetary boundaries.</strong></p>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3: Second-Hand Style -->
+<div class="modal fade" id="modalFashion3" tabindex="-1" aria-labelledby="modalFashion3Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalFashion3Label"><i class="bi bi-bag-heart me-2"></i>Second-Hand Style</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+  <p>Second-hand shopping is one of the most accessible and impactful ways to reduce fashion waste. It extends the life of garments, curbs demand for new production, and keeps perfectly good items from ending up in landfills. Beyond its environmental benefits, second-hand fashion offers creativity, affordability, and uniqueness—allowing you to curate a wardrobe that’s truly your own.</p>
+  <h6>Why Choose Second-Hand?</h6>
+  <ul>
+    <li><strong>Waste Reduction:</strong> Every used item purchased displaces the need for a new one. This saves raw materials, reduces greenhouse gas emissions, and keeps textiles in circulation longer.</li>
+    <li><strong>Affordability:</strong> Quality clothing—often from high-end or boutique brands—can be found at a fraction of its original price. Shopping second-hand is budget-friendly without compromising on style or integrity.</li>
+    <li><strong>Individuality:</strong> Vintage and pre-loved pieces bring character and history to your wardrobe. It’s a way to stand out while honoring fashion’s past.</li>
+  </ul>
+  <h6>Where to Find Great Pieces</h6>
+  <ul>
+    <li><strong>Thrift and Charity Shops:</strong> Local stores often carry a wide range of items, from casual basics to designer gems. Shopping here also supports community programs and nonprofits.</li>
+    <li><strong>Online Marketplaces:</strong> Explore apps and websites like Depop, Poshmark, Vinted, and eBay to access second-hand fashion across different styles and price ranges.</li>
+    <li><strong>Clothing Swaps and Pop-Ups:</strong> Organize or attend events where you can exchange clothing with others. It’s a great way to refresh your closet without spending money or generating waste.</li>
+  </ul>
+  <h6>Styling and Alteration Tips</h6>
+  <ul>
+    <li>Tailor oversized garments to fit your frame—small adjustments can make a huge difference in wearability.</li>
+    <li>Layer creatively by mixing textures, eras, or bold accessories to personalize your look.</li>
+    <li>Repurpose pieces—turn a button-down into a cropped top, or style a scarf as a headwrap, bag strap, or belt.</li>
+  </ul>
+  <p><strong>Second-hand style isn’t about sacrifice—it’s about savvy shopping, thoughtful expression, and embracing fashion’s circular potential. Every pre-loved item you wear is a vote for a more sustainable future.</strong></p>
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+  
+<section id="eco-shop" class="container">
+  <h2 class="section-title" data-aos="fade-up">Shop Sustainable Products</h2>
+  <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+    <!-- Product Card 1 -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://m.media-amazon.com/images/I/71LM+SMCcGL._AC_UF350,350_QL80_.jpg" class="card-img-top" alt="Zero Waste Kit">
+        <div class="card-body">
+          <h5 class="card-title">Zero-Waste Starter Kit</h5>
+          <p class="card-text">Everything you need to reduce waste at home. Great for beginners!</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalShop1">Shop Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/047/505/987/small/water-bottle-reusable-steel-thermo-water-bottle-on-green-grass-sustainable-lifestyle-plastic-free-zero-waste-free-living-go-green-environment-protection-health-conscious-steel-thermo-water-bottle-of-silver-on-background-of-blurred-grass-photo.jpg" class="card-img-top" alt="Reusable Water Bottle">
+        <div class="card-body">
+          <h5 class="card-title">Reusable Water Bottle</h5>
+          <p class="card-text">Stylish, durable, and eco-friendly — perfect for hydration on the go.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalShop2">Shop Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://media.istockphoto.com/id/1309230401/photo/brushes-sponges-rubber-gloves-and-natural-cleaning-products-in-the-basket.jpg?s=612x612&w=0&k=20&c=uDThSSDg2WnREa1qOFjtvC_hP8KPbdHdFOLYIyQsFDU=" class="card-img-top" alt="Eco-Friendly Cleaning Set">
+        <div class="card-body">
+          <h5 class="card-title">Eco-Friendly Cleaning Set</h5>
+          <p class="card-text">Ditch harsh chemicals with this natural, non-toxic cleaning bundle.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalShop3">Shop Now</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Card 4 -->
+<div class="col-md-4">
+  <div class="card">
+    <img src="https://www.shutterstock.com/image-photo/bath-background-front-view-straw-600nw-2242794861.jpg" class="card-img-top" alt="Bamboo Toothbrush">
+    <div class="card-body">
+      <h5 class="card-title">Bamboo Toothbrush Set</h5>
+      <p class="card-text">A 4-pack of biodegradable, plastic-free toothbrushes for a cleaner planet.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalShop4">Shop Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- Card 5 -->
+<div class="col-md-4">
+  <div class="card">
+    <img src="https://media.istockphoto.com/id/584574708/photo/soap-bar-and-liquid-shampoo-shower-gel-towels-spa-kit.jpg?s=612x612&w=0&k=20&c=TFeQmTwVUwKY0NDKFFORe3cwDCxRtotFgEujMswn3dc=" class="card-img-top" alt="Shampoo Bar">
+    <div class="card-body">
+      <h5 class="card-title">Refillable Shampoo Bar</h5>
+      <p class="card-text">Zero-waste shampoo with nourishing natural ingredients. Lathers beautifully.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalShop5">Shop Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- Card 6 -->
+<div class="col-md-4">
+  <div class="card">
+    <img src="https://m.media-amazon.com/images/I/81fIrg7FiYL._AC_UF1000,1000_QL80_.jpg" class="card-img-top" alt="Compostable Sponges">
+    <div class="card-body">
+      <h5 class="card-title">Compostable Kitchen Sponges</h5>
+      <p class="card-text">Durable, eco-friendly sponges made from cellulose and loofah. No plastic.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalShop6">Shop Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- Card 7 -->
+<div class="col-md-4">
+  <div class="card">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/053/216/499/small/mockup-of-a-plastic-coffee-cup-on-a-background-space-for-text-photo.jpg" class="card-img-top" alt="Reusable Coffee Cup">
+    <div class="card-body">
+      <h5 class="card-title">Reusable Coffee Cup</h5>
+      <p class="card-text">Barista-friendly insulated cup with leak-proof lid. Ditch disposables for good.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalShop7">Shop Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- Card 8 -->
+<div class="col-md-4">
+  <div class="card">
+    <img src="https://i.ebayimg.com/images/g/BPQAAOSwkaJiuUsK/s-l400.jpg" class="card-img-top" alt="Dish Soap Block">
+    <div class="card-body">
+      <h5 class="card-title">Natural Dish Soap Block</h5>
+      <p class="card-text">Powerful grease-cutting soap in a zero-waste solid block. Plastic-free cleaning.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalShop8">Shop Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- Card 9 -->
+<div class="col-md-4">
+  <div class="card">
+    <img src="https://media.istockphoto.com/id/533030147/photo/sheep-dryer-ball.jpg?s=612x612&w=0&k=20&c=Tk044dVAXLSvA-xemyHZN55_e4FN-j4mrRB9pxBaGb4=" class="card-img-top" alt="Wool Dryer Balls">
+    <div class="card-body">
+      <h5 class="card-title">Wool Dryer Balls (Set of 3)</h5>
+      <p class="card-text">Natural alternative to dryer sheets. Softens clothes, saves energy, and reusable for years.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalShop9">Shop Now</button>
+    </div>
+  </div>
+</div>
+<!-- Card 10 -->
+<div class="col-md-4">
+  <div class="card">
+    <img src="https://media.istockphoto.com/id/1425552205/photo/different-products-in-beeswax-food-wraps-on-light-blue-wooden-table-flat-lay.jpg?s=612x612&w=0&k=20&c=VBBOgah81qTZQAF5pondNrWt0FBrCZM0h65o0WBCtoA=" class="card-img-top" alt="Beeswax Wraps">
+    <div class="card-body">
+      <h5 class="card-title">Beeswax Food Wraps</h5>
+      <p class="card-text">A reusable alternative to plastic wrap. Keeps food fresh and cuts down on waste.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalShop10">Shop Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- Card 11 -->
+<div class="col-md-4">
+  <div class="card">
+    <img src="https://images.pexels.com/photos/7262894/pexels-photo-7262894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="card-img-top" alt="Stainless Steel Straw Set">
+    <div class="card-body">
+      <h5 class="card-title">Stainless Steel Straw Set</h5>
+      <p class="card-text">Includes cleaning brushes and travel pouch. Say no to single-use straws.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalShop11">Shop Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- Card 12 -->
+<div class="col-md-4">
+  <div class="card">
+    <img src="https://www.compostmagazine.com/wp-content/uploads/2019/12/kitchen-oompost-bin-in-modern-kitchen-transformed-1024x819.jpeg" class="card-img-top" alt="Kitchen Compost Bin">
+    <div class="card-body">
+      <h5 class="card-title">Kitchen Countertop Compost Bin</h5>
+      <p class="card-text">Collect food scraps in style. Odor-blocking and perfect for zero-waste kitchens.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalShop12">Shop Now</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Card 13 -->
+<div class="col-md-4">
+  <div class="card">
+    <img src="https://media.istockphoto.com/id/1172867865/photo/craft-notebook-and-green-leaves.jpg?s=612x612&w=0&k=20&c=VMErUTxiVMKIxWgAepOlNZUlDGoA8pPXZSNVs5JTJHc=" class="card-img-top" alt="Recycled Notebook">
+    <div class="card-body">
+      <h5 class="card-title">Recycled Paper Notebook</h5>
+      <p class="card-text">Made from 100% post-consumer materials. Eco-friendly and stylish journaling.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalShop13">Shop Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- Card 14 -->
+<div class="col-md-4">
+  <div class="card">
+    <img src="https://media.istockphoto.com/id/949299902/photo/portable-solar-panel-is-on-the-beach.jpg?s=612x612&w=0&k=20&c=FBm27VqFizqlWZFZWl8Obhk79gqJI0OdvI4gG2wT5-0=" class="card-img-top" alt="Solar Phone Charger">
+    <div class="card-body">
+      <h5 class="card-title">Portable Solar Phone Charger</h5>
+      <p class="card-text">Harness solar energy to power your devices sustainably while on the go.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalShop14">Shop Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- Card 15 -->
+<div class="col-md-4">
+  <div class="card">
+    <img src="https://media.istockphoto.com/id/1137063464/photo/recycled-textile-bags-for-zero-waste-grocery-shopping.jpg?s=612x612&w=0&k=20&c=RUYMGQC04CFTLHDVPAe49qjy6lg4ZK7lBMslKzgZUFc=" class="card-img-top" alt="Reusable Grocery Tote">
+    <div class="card-body">
+      <h5 class="card-title">Reusable Organic Cotton Tote</h5>
+      <p class="card-text">Strong, stylish, and sustainable — perfect for everyday shopping needs.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalShop15">Shop Now</button>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<!-- Modal for Product 1 -->
+<div class="modal fade" id="modalShop1" tabindex="-1" aria-labelledby="modalShop1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalShop1Label">Zero-Waste Starter Kit</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Jumpstart your low-waste journey with this thoughtfully curated starter kit. Whether you're going plastic-free or gifting sustainably, this bundle helps you make easy everyday changes.</p>
+        <p>✔ Bamboo cutlery & stainless steel straw set  
+        <br>✔ Organic cotton produce bags (set of 3)  
+        <br>✔ Beeswax food wraps for plastic-free storage  
+        <br>✔ Reusable tote bag made from recycled cotton</p>
+        <p><strong>Benefits:</strong> All-in-one bundle for reducing everyday plastic use. Great for beginners, travelers, or sustainable gifting.</p>
+        <p><strong>Price:</strong> $34.99</p>
+        <a href="#" class="btn btn-success">Go to Product Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal for Product 2 -->
+<div class="modal fade" id="modalShop2" tabindex="-1" aria-labelledby="modalShop2Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalShop2Label">Reusable Water Bottle</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Stay hydrated in style and help cut plastic bottle waste with our premium reusable bottle. Engineered for performance, and perfect for daily use or outdoor adventures.</p>
+        <p>✔ BPA-free, toxin-free stainless steel construction  
+        <br>✔ Keeps beverages cold for 24 hrs or hot for 12  
+        <br>✔ 750ml leak-proof design  
+        <br>✔ Comes in 5 vibrant colors</p>
+        <p><strong>Benefits:</strong> Cuts single-use bottle waste, keeps drinks at the perfect temp, and supports global clean water efforts.</p>
+        <p><strong>Price:</strong> $19.95</p>
+        <a href="#" class="btn btn-success">Go to Product Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal for Product 3 -->
+<div class="modal fade" id="modalShop3" tabindex="-1" aria-labelledby="modalShop3Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalShop3Label">Eco-Friendly Cleaning Set</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Clean your home without harmful chemicals. This plant-based, biodegradable cleaning set is gentle on surfaces and strong on stains. Perfect for conscious households.</p>
+        <p>✔ Glass spray bottles (x2)  
+        <br>✔ Concentrated natural cleaner pods (multi-surface)  
+        <br>✔ Reusable microfiber cloths (set of 3)  
+        <br>✔ Lemon & lavender essential oil blends</p>
+        <p><strong>Benefits:</strong> Safer for your family and the planet. Reduces plastic waste and toxic exposure, while leaving your space fresh.</p>
+        <p><strong>Price:</strong> $29.99</p>
+        <a href="#" class="btn btn-success">Go to Product Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 4 -->
+<div class="modal fade" id="modalShop4" tabindex="-1" aria-labelledby="modalShop4Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalShop4Label">Bamboo Toothbrush Set</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>A 4-pack of biodegradable bamboo toothbrushes with soft bristles. Perfect for sustainable oral care.</p>
+        <p>✔ Compostable handles  
+        <br>✔ Minimalist packaging  
+        <br>✔ Dentist-approved design</p>
+        <p><strong>Benefits:</strong> Lowers plastic waste in your bathroom routine. A natural and guilt-free way to brush sustainably.</p>
+        <p><strong>Price:</strong> $11.99</p>
+        <a href="#" class="btn btn-success">Go to Product Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 5 -->
+<div class="modal fade" id="modalShop5" tabindex="-1" aria-labelledby="modalShop5Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalShop5Label">Refillable Shampoo Bar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>This plastic-free shampoo bar lathers beautifully and lasts for months. Ideal for all hair types.</p>
+        <p>✔ Sulfate-free & vegan  
+        <br>✔ Zero-waste packaging  
+        <br>✔ Fresh botanical scent</p>
+        <p><strong>Benefits:</strong> Eliminates plastic bottles, gentle on hair and scalp, and perfect for travel.</p>
+        <p><strong>Price:</strong> $9.75</p>
+        <a href="#" class="btn btn-success">Go to Product Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 6 -->
+<div class="modal fade" id="modalShop6" tabindex="-1" aria-labelledby="modalShop6Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalShop6Label">Compostable Kitchen Sponges</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>A 6-pack of fully compostable and durable sponges made from cellulose and loofah.</p>
+        <p>✔ Plastic-free  
+        <br>✔ Non-scratch surface  
+        <br>✔ Quick-drying & odor-resistant</p>
+        <p><strong>Benefits:</strong> Tough on grime, gentle on the environment. 100% compostable after use—just toss it in your compost bin.</p>
+        <p><strong>Price:</strong> $8.25</p>
+        <a href="#" class="btn btn-success">Go to Product Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 7 -->
+<div class="modal fade" id="modalShop7" tabindex="-1" aria-labelledby="modalShop7Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalShop7Label">Reusable Coffee Cup</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>This barista-friendly cup is insulated and leak-proof—ditch disposable cups for good.</p>
+        <p>✔ Dishwasher safe  
+        <br>✔ Silicone grip sleeve  
+        <br>✔ 12oz or 16oz options</p>
+        <p><strong>Benefits:</strong> Reduces landfill waste from coffee cups, keeps drinks warm, and fits most café machines.</p>
+        <p><strong>Price:</strong> $16.00</p>
+        <a href="#" class="btn btn-success">Go to Product Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 8 -->
+<div class="modal fade" id="modalShop8" tabindex="-1" aria-labelledby="modalShop8Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalShop8Label">Natural Dish Soap Block</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Say goodbye to plastic bottles. This soap block cuts grease and lasts for months.</p>
+        <p>✔ Palm oil free  
+        <br>✔ Lemon & rosemary scent  
+        <br>✔ Works with any sponge or brush</p>
+        <p><strong>Benefits:</strong> A zero-waste essential for clean dishes and a clean conscience. Long-lasting and eco-friendly.</p>
+        <p><strong>Price:</strong> $7.80</p>
+        <a href="#" class="btn btn-success">Go to Product Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 9 -->
+<div class="modal fade" id="modalShop9" tabindex="-1" aria-labelledby="modalShop9Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalShop9Label">Wool Dryer Balls (Set of 3)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Replace dryer sheets with these reusable wool balls. They soften laundry and reduce drying time naturally.</p>
+        <p>✔ Lasts 1,000+ loads  
+        <br>✔ Reduces static & wrinkles  
+        <br>✔ Add essential oils for scent</p>
+        <p><strong>Benefits:</strong> Reusable alternative to dryer sheets—lowers energy use and waste, softens clothes naturally.</p>
+        <p><strong>Price:</strong> $13.95</p>
+        <a href="#" class="btn btn-success">Go to Product Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 10 -->
+<div class="modal fade" id="modalShop10" tabindex="-1" aria-labelledby="modalShop10Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalShop10Label">Beeswax Food Wraps</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Ditch plastic wrap for good with these reusable beeswax wraps. Perfect for storing fruit, covering bowls, or wrapping snacks — all without the waste.</p>
+        <p>✔ Includes 3 wraps in small, medium, and large sizes  
+        <br>✔ Made with organic cotton, beeswax, jojoba oil, and tree resin  
+        <br>✔ Naturally antibacterial and reusable for up to a year  
+        </p>
+        <p><strong>Benefits:</strong> Sustainable, breathable food storage that keeps produce fresher for longer.</p>
+        <p><strong>Price:</strong> $18.95</p>
+        <a href="#" class="btn btn-success">Go to Product Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 11 -->
+<div class="modal fade" id="modalShop11" tabindex="-1" aria-labelledby="modalShop11Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalShop11Label">Stainless Steel Straw Set</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Make sipping more sustainable with this set of sleek, reusable stainless steel straws. Great for smoothies, iced coffee, and everyday use.</p>
+        <p>✔ Set includes 8 straws (4 straight, 4 bent), 2 cleaning brushes, and a cotton travel pouch  
+        <br>✔ Food-grade stainless steel — BPA-free and rust-resistant  
+        <br>✔ Dishwasher-safe and travel-friendly  
+        </p>
+        <p><strong>Benefits:</strong> Eliminate single-use straws and keep your lifestyle eco-conscious on the go.</p>
+        <p><strong>Price:</strong> $11.99</p>
+        <a href="#" class="btn btn-success">Go to Product Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal for Product 12 -->
+<div class="modal fade" id="modalShop12" tabindex="-1" aria-labelledby="modalShop12Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalShop12Label">Kitchen Countertop Compost Bin</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Make composting effortless and elegant with this countertop bin. Designed to blend into any kitchen, it keeps scraps out of the landfill and smells out of your space.</p>
+        <p>✔ Holds 1.3 gallons of food waste  
+        <br>✔ Comes with replaceable charcoal filters for odor control  
+        <br>✔ Rust-resistant stainless steel with a sleek matte finish  
+        </p>
+        <p><strong>Benefits:</strong> Encourages composting at home, reduces methane emissions, and fits stylishly into eco-conscious kitchens.</p>
+        <p><strong>Price:</strong> $24.99</p>
+        <a href="#" class="btn btn-success">Go to Product Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 13 -->
+<div class="modal fade" id="modalShop13" tabindex="-1" aria-labelledby="modalShop13Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalShop13Label">Recycled Paper Notebook</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Journal with purpose using this sleek notebook made entirely from post-consumer recycled paper. Ideal for students, writers, and eco-conscious professionals.</p>
+        <p>✔ 100% recycled paper with soy-based ink  
+        <br>✔ Durable cover and spiral binding  
+        <br>✔ 80 lined pages, A5 size  
+        </p>
+        <p><strong>Benefits:</strong> Supports sustainable forestry, reduces landfill waste, and looks great on any desk.</p>
+        <p><strong>Price:</strong> $9.99</p>
+        <a href="#" class="btn btn-success">Go to Product Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 14 -->
+<div class="modal fade" id="modalShop14" tabindex="-1" aria-labelledby="modalShop14Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalShop14Label">Portable Solar Phone Charger</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Stay connected and sustainable with this compact solar-powered charger. A must-have for camping, travel, or emergency kits.</p>
+        <p>✔ Dual USB ports with 10,000mAh battery  
+        <br>✔ Charges via sunlight or USB cable  
+        <br>✔ Built-in LED flashlight and waterproof casing  
+        </p>
+        <p><strong>Benefits:</strong> Eco-friendly energy source, ideal for off-grid adventures and backup power.</p>
+        <p><strong>Price:</strong> $29.95</p>
+        <a href="#" class="btn btn-success">Go to Product Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 15 -->
+<div class="modal fade" id="modalShop15" tabindex="-1" aria-labelledby="modalShop15Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalShop15Label">Reusable Organic Cotton Tote</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>This sturdy and stylish tote is your everyday companion — from the farmer’s market to your daily commute. Made with certified organic cotton.</p>
+        <p>✔ Spacious and reinforced to carry up to 30 lbs  
+        <br>✔ Minimalist design with long handles  
+        <br>✔ Machine-washable and biodegradable  
+        </p>
+        <p><strong>Benefits:</strong> Plastic-free, practical, and perfect for reducing your carbon footprint in style.</p>
+        <p><strong>Price:</strong> $12.50</p>
+        <a href="#" class="btn btn-success">Go to Product Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<section id="diy-projects" class="container">
+  <h2 class="section-title" data-aos="fade-up">DIY & Upcycling Projects</h2>
+  <div class="card-section mb-4" data-aos="fade-up" data-aos-delay="100">
+   <p class="section-description">
+  Why toss it when you can transform it? This section is all about creative, hands-on ways to reduce waste and express your style through sustainable DIY and upcycling. Whether you're turning old t-shirts into tote bags, repurposing jars into chic home décor, or giving furniture a fresh new look, these eco-friendly projects not only help the planet but also add a personalized touch to your everyday life. Dive in to discover how simple materials and a bit of imagination can lead to practical, beautiful, and meaningful creations.
+</p>
+  </div>
+
+  <div class="row" data-aos="fade-up" data-aos-delay="200">
+
+    <!-- Card 1: Upcycled Home Decor -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm h-100">
+        <img src="https://www.decoraid.com/wp-content/uploads/2022/04/upcycling-home-decoration-design-ideas-2500x1667.jpeg" class="card-img-top" alt="Upcycled Home Decor">
+        <div class="card-body p-3">
+          <h5 class="card-title mb-2"><i class="bi bi-house-heart me-2"></i>Upcycled Home Decor</h5>
+          <p class="card-text small mb-2">
+            Transform glass jars, old crates, and discarded wood into stunning decor that reflects your personal style and reduces waste.
+          </p>
+          <p class="text-muted small mb-2">
+            Need ideas for shelves, planters, or rustic centerpieces?
+          </p>
+          <button class="btn btn-success btn-sm mt-1" data-bs-toggle="modal" data-bs-target="#modalDIY1">
+            <i class="bi bi-brush"></i> See Ideas
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Clothing Upcycling -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm h-100">
+        <img src="https://impakter.com/wp-content/uploads/2022/02/PIXNIO-2389372-3000x2000-1-scaled.jpg" class="card-img-top" alt="Clothing Upcycling">
+        <div class="card-body p-3">
+          <h5 class="card-title mb-2"><i class="bi bi-scissors me-2"></i>Clothing Upcycling</h5>
+          <p class="card-text small mb-2">
+            Breathe new life into old clothes by turning jeans into bags, shirts into cushion covers, or adding embroidery and patches.
+          </p>
+          <p class="text-muted small mb-2">
+            Looking for stylish, easy-to-do upcycling tutorials?
+          </p>
+          <button class="btn btn-success btn-sm mt-1" data-bs-toggle="modal" data-bs-target="#modalDIY2">
+            <i class="bi bi-palette2"></i> Explore Ideas
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Storage Hacks -->
+    <div class="col-md-4 mb-4">
+      <div class="card shadow-sm h-100">
+        <img src="https://t4.ftcdn.net/jpg/05/35/17/77/360_F_535177714_7JC0aSmX5Ns6Pf8Y7mpp4ZqX3ys2fcJH.jpg" class="card-img-top" alt="Storage Hacks">
+        <div class="card-body p-3">
+          <h5 class="card-title mb-2"><i class="bi bi-box-seam me-2"></i>Eco Storage Hacks</h5>
+          <p class="card-text small mb-2">
+            Repurpose boxes, cans, or baskets into smart storage for any room—perfect for organizing while cutting down on clutter.
+          </p>
+          <p class="text-muted small mb-2">
+            Want space-saving tricks without spending extra?
+          </p>
+          <button class="btn btn-success btn-sm mt-1" data-bs-toggle="modal" data-bs-target="#modalDIY3">
+            <i class="bi bi-lightbulb"></i> Get Inspired
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modal 1 -->
+<div class="modal fade" id="modalDIY1" tabindex="-1" aria-labelledby="modalDIY1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalDIY1Label"><i class="bi bi-house-heart me-2"></i>Upcycled Home Decor</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+     <div class="modal-body">
+  <p>Redesigning your space doesn’t have to mean buying new. In fact, one of the most impactful ways to reduce household waste and curb overconsumption is by repurposing what you already own. Upcycled home decor is a creative, affordable, and eco-conscious approach to interior design. Rather than discarding old items, you can reimagine them as beautiful, functional features in your home.</p>
+
+  <p>Whether you’re crafting cozy accents or large statement pieces, upcycling lets you personalize your space with meaning and sustainability at its core. Here are several ideas to spark inspiration:</p>
+  
+  <ul>
+    <li><strong>Glass Jar Lanterns:</strong> Repurpose empty jars as lanterns by adding candles, fairy lights, or LED tea lights inside. Wrap them in jute, lace, or wire to create hanging or tabletop ambiance lighting for indoor or outdoor use.</li>
+    <li><strong>Crate Shelving:</strong> Wooden fruit or wine crates can be sanded, painted, or stained to match your decor, then stacked horizontally or vertically to form rustic shelving units. They’re ideal for books, planters, or storage baskets.</li>
+    <li><strong>Wine Bottle Vases:</strong> With a simple bottle cutter or glass-cutting technique, old wine bottles can become sleek vases or candleholders. Paint them, etch them, or leave them clear for a minimalist touch.</li>
+    <li><strong>Pallet Furniture:</strong> Shipping pallets can be transformed into coffee tables, patio lounges, bed frames, and even vertical gardens. With some sanding, staining, and cushioning, they become sturdy and stylish statement pieces.</li>
+  </ul>
+
+  <p>You don’t need to be a professional craftsman to get started. Upcycling home decor is about working with what you have and using simple tools and creativity. Visit thrift stores or ask friends and family for unused materials—they’re often eager to declutter and contribute.</p>
+
+  <p>✔ <strong>Sustainability Tip:</strong> Upcycling helps divert waste from landfills, cuts down on the demand for new manufacturing, and significantly lowers your carbon footprint. It also encourages mindful living by celebrating resourcefulness and design over mass production.</p>
+
+  <p><strong>Final Thought:</strong> Your home should reflect your values and creativity. Upcycled decor not only tells a story—it supports a lifestyle of intentionality, sustainability, and artistry.</p>
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 2 -->
+<div class="modal fade" id="modalDIY2" tabindex="-1" aria-labelledby="modalDIY2Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalDIY2Label"><i class="bi bi-scissors me-2"></i>Clothing Upcycling</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+     <div class="modal-body">
+  <p>Upcycling clothing is more than a trend—it’s a movement toward creativity, self-expression, and environmental responsibility. As the fashion industry remains one of the largest polluters globally, finding ways to give your garments a second life is one of the most direct actions you can take to reduce textile waste and challenge overconsumption.</p>
+
+  <p>Whether you're a seasoned DIYer or just starting out, transforming old clothes can be rewarding, educational, and fun. Here are several beginner-friendly ideas to try at home:</p>
+
+  <ul>
+    <li><strong>Denim Bags:</strong> Repurpose worn-out jeans into sturdy, stylish tote bags or crossbody purses. Use pockets as external features, or patch together various pieces for a patchwork effect. Add zippers, buttons, or lining for a professional touch.</li>
+    <li><strong>T-Shirt Quilts:</strong> Turn a stack of beloved but unworn t-shirts into a cozy quilt or throw blanket. This is a perfect way to preserve sentimental shirts from events, travels, or school years without letting them collect dust.</li>
+    <li><strong>Decorative Patches:</strong> Use embroidery, iron-on patches, or hand-stitched designs to hide stains and holes, or simply to add personality to plain items. This works especially well on jackets, jeans, or canvas bags.</li>
+    <li><strong>Cropped or Re-cut Pieces:</strong> Give outdated or ill-fitting items new life by cropping tops, creating sleeveless tanks, turning pants into shorts, or adding slits and ties for a trendy, customized look.</li>
+  </ul>
+
+  <p>Don’t worry about perfection—upcycling is about exploration, not uniformity. Small imperfections can add charm and character to your pieces. You’ll develop useful skills along the way like basic sewing, fabric dyeing, or pattern-making.</p>
+
+  <p>✔ <strong>Why It Matters:</strong> Upcycling clothing reduces landfill waste, limits the need for new resources, and fights the cycle of fast fashion. It also allows for deeper connection with the clothes we own, promoting care, creativity, and reuse over constant replacement.</p>
+
+  <p><strong>Final Thought:</strong> Every stitch and snip is a step toward a more sustainable wardrobe. Through upcycling, you not only save money and reduce waste—you create something uniquely yours with lasting impact.</p>
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="modalDIY3" tabindex="-1" aria-labelledby="modalDIY3Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalDIY3Label"><i class="bi bi-box-seam me-2"></i>Eco Storage Hacks</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+  <p>Organizing your space doesn’t have to rely on mass-produced plastic bins or costly systems. With a little imagination and repurposing, you can create functional, beautiful storage solutions from everyday items—reducing waste and designing a home that reflects sustainable values.</p>
+
+  <p>Eco storage hacks combine efficiency with environmental consciousness, helping you stay clutter-free without contributing to overproduction or plastic dependency. Here are a few tried-and-true ideas:</p>
+
+  <ul>
+    <li><strong>Tin Can Organizers:</strong> Clean and decorate tin cans to use as holders for pens, kitchen utensils, art supplies, or bathroom essentials. Wrap them with fabric, twine, or decorative paper to match your space’s aesthetic.</li>
+    <li><strong>Shoebox Drawers:</strong> Don’t toss those sturdy shoeboxes—cover them with fabric or wallpaper to create custom drawer organizers, shelf bins, or even stackable compartments for accessories, cords, and stationery.</li>
+    <li><strong>Fabric Baskets:</strong> Upcycle scrap fabric or old clothes like denim and flannel into soft, washable baskets or buckets. They’re perfect for storing toys, craft supplies, or rolled-up towels.</li>
+    <li><strong>Hanging Storage:</strong> Sew or glue pockets onto long strips of cloth to create hanging wall storage for bathrooms, entryways, or desk areas. You can also repurpose old canvas tote bags as hanging containers.</li>
+  </ul>
+
+  <p>These projects are not only easy on the wallet—they’re a fun way to upcycle materials that might otherwise end up in the trash. You can adjust dimensions, colors, and shapes to fit specific needs and spaces, creating a custom organization system that works for your home.</p>
+
+  <p>✔ <strong>Why Eco Storage Works:</strong> It reduces plastic consumption, diverts household waste from landfills, and encourages creative problem-solving. Instead of buying more, you learn to make do with what you have—while elevating your space and reducing clutter.</p>
+
+  <p><strong>Final Thought:</strong> Thoughtful organization can go hand-in-hand with sustainability. When we see potential in the overlooked, we create storage that’s not just tidy—but transformative.</p>
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+<section id="interactive-tools" class="container">
+  <h2 class="section-title" data-aos="fade-up">Interactive Tools</h2>
+  <div class="card-section" data-aos="fade-up" data-aos-delay="100">
+    <p class="section-description">Curious how sustainable your lifestyle is? Try our quick quiz or carbon footprint calculator and get personalized tips!</p>
+    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#quizModal"><i class="bi bi-question-circle me-1"></i> Take the Sustainability Quiz</a>
+    <a href="#" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#calculatorModal"><i class="bi bi-calculator me-1"></i> Try the Footprint Calculator</a>
+
+  </div>
+</section>
+
+
+<div class="modal fade" id="quizModal" tabindex="-1" aria-labelledby="quizModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="quizModalLabel">Sustainability Quiz</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="sustainabilityQuiz">
+          <div class="mb-3">
+            <label class="form-label">How often do you eat meat?</label>
+            <select class="form-select" name="meat">
+              <option value="3">Daily</option>
+              <option value="2">Few times a week</option>
+              <option value="1">Rarely/Never</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">How do you usually commute?</label>
+            <select class="form-select" name="commute">
+              <option value="3">Car</option>
+              <option value="2">Public transport</option>
+              <option value="1">Walk/Bike</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">How often do you buy new clothes?</label>
+            <select class="form-select" name="clothes">
+              <option value="3">Monthly</option>
+              <option value="2">Every few months</option>
+              <option value="1">Rarely/Secondhand</option>
+            </select>
+          </div>
+        </form>
+        <div id="quizResult" class="mt-4 fw-bold"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" onclick="calculateQuiz()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="calculatorModal" tabindex="-1" aria-labelledby="calculatorModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="calculatorModalLabel">Carbon Footprint Calculator</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="footprintCalculator">
+          <div class="mb-3">
+            <label class="form-label">Monthly electricity usage (kWh):</label>
+            <input type="number" class="form-control" name="electricity" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Weekly car travel (miles):</label>
+            <input type="number" class="form-control" name="miles" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Flights per year:</label>
+            <input type="number" class="form-control" name="flights" required>
+          </div>
+        </form>
+        <div id="calcResult" class="mt-4 fw-bold"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success" onclick="calculateFootprint()">Calculate</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<section id="blog" class="container">
+  <h2 class="section-title" data-aos="fade-up">Sustainability Blog & Articles</h2>
+  <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+    <!-- Blog Card 1 -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://static.wixstatic.com/media/e4f25b_a3d3fd6902ac4c42bf585000ec9321b5~mv2.jpg/v1/fill/w_2500,h_2500,al_c/e4f25b_a3d3fd6902ac4c42bf585000ec9321b5~mv2.jpg" class="card-img-top" alt="Blog Post">
+        <div class="card-body">
+          <h5 class="card-title">10 Easy Swaps for a Greener Home</h5>
+          <p class="card-text">Discover everyday items you can replace to live more sustainably.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBlog1">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Card 2 -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://insideretail.asia/wp-content/uploads/2020/11/LG.jpg" class="card-img-top" alt="Blog Post">
+        <div class="card-body">
+          <h5 class="card-title">Sustainable Fashion 101</h5>
+          <p class="card-text">Learn the basics of eco-friendly fashion and why it matters.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBlog2">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Card 3 -->
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://www.biopak.com/media/wysiwyg/Hands-holding-compost-shutterstock_160161059.jpg" class="card-img-top" alt="Blog Post">
+        <div class="card-body">
+          <h5 class="card-title">Composting at Home</h5>
+          <p class="card-text">Turn food waste into garden gold with these simple tips.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBlog3">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Card 4 -->
+    <div class="col-md-4">
+      <div class="card mt-4">
+        <img src="https://img.pikbest.com/photo/20250203/eco-conscious-food-arrangement-in-canvas-grocery-bags_11491482.jpg!f305cw" class="card-img-top" alt="Blog Post">
+        <div class="card-body">
+          <h5 class="card-title">Greener Grocery Shopping</h5>
+          <p class="card-text">Tips for buying eco-friendly, local, and plastic-free groceries.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBlog4">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Card 5 -->
+    <div class="col-md-4">
+      <div class="card mt-4">
+        <img src="https://media.istockphoto.com/id/1405938575/photo/a-lush-green-mountain.jpg?s=612x612&w=0&k=20&c=-bYz18vGSgpB1pG7Po6c5NhpP2rSJQATW1xh5SzXCjE=" class="card-img-top" alt="Blog Post">
+        <div class="card-body">
+          <h5 class="card-title">Low-Waste Travel Guide</h5>
+          <p class="card-text">Travel consciously with this guide to reducing waste on the road.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBlog5">Read More</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blog Card 6 -->
+    <div class="col-md-4">
+      <div class="card mt-4">
+        <img src="https://media.istockphoto.com/id/465958469/photo/natural-cleaners-vinegar-baking-soda-salt-and-lemon.jpg?s=612x612&w=0&k=20&c=Pz-_dOieHs7xY5u8r-jpcmR0ilkFCFd7fbXxo4t_OLM=" class="card-img-top" alt="Blog Post">
+        <div class="card-body">
+          <h5 class="card-title">DIY Eco-Friendly Cleaning</h5>
+          <p class="card-text">Make your own natural cleaners with safe, simple ingredients.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBlog6">Read More</button>
+        </div>
+      </div>
+    </div>
+
+<!-- Blog Card 7 -->
+<div class="col-md-4">
+      <div class="card mt-4">
+    <img src="https://media.istockphoto.com/id/1163013366/photo/natural-cosmetics.jpg?s=612x612&w=0&k=20&c=zuj4jsweHCRUtxtZTF1PV6NaA0OF4OIoKjrmkK3PuEo=" class="card-img-top" alt="Sustainable Beauty">
+    <div class="card-body">
+      <h5 class="card-title">Sustainable Beauty Tips</h5>
+      <p class="card-text">Green your skincare routine with cruelty-free, refillable, and natural products.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBlog7">Read More</button>
+    </div>
+  </div>
+</div>
+
+<!-- Blog Card 8 -->
+<div class="col-md-4">
+      <div class="card mt-4">
+    <img src="https://media.istockphoto.com/id/1272443198/photo/a-reusable-bag-full-of-colourful-and-fresh-organic-vegetables-and-groceries-on-the-kitchen.jpg?s=612x612&w=0&k=20&c=T53gVQ_UIKVpbSDIEUM4PJWU9EdNwu1ZCEDdF8k6RPI=" class="card-img-top" alt="Eco-Friendly Kitchen">
+    <div class="card-body">
+      <h5 class="card-title">Greener Kitchen Habits</h5>
+      <p class="card-text">Reduce kitchen waste and energy use with these simple everyday habits.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBlog8">Read More</button>
+    </div>
+  </div>
+</div>
+
+<!-- Blog Card 9 -->
+<div class="col-md-4">
+      <div class="card mt-4">
+    <img src="https://images.stockcake.com/public/2/f/7/2f7d41a8-c855-43a7-8312-7789a7f75162_medium/eco-friendly-gift-set-stockcake.jpg" class="card-img-top" alt="Sustainable Gift Ideas">
+    <div class="card-body">
+      <h5 class="card-title">Sustainable Gift Ideas</h5>
+      <p class="card-text">Gift consciously with eco-friendly, meaningful alternatives for any occasion.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBlog9">Read More</button>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<!-- Modal 1 -->
+<div class="modal fade" id="modalBlog1" tabindex="-1" aria-labelledby="modalBlog1Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalBlog1Label">10 Easy Swaps for a Greener Home</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Transforming your home into a more sustainable space doesn't require big changes — small, mindful swaps add up. Here are 10 easy eco-friendly switches to get started:</p>
+
+        <ol>
+          <li><strong>Beeswax Wraps Instead of Plastic Wrap:</strong> Reusable and breathable, beeswax wraps are perfect for storing food and reduce your plastic waste significantly.</li>
+          
+          <li><strong>Refillable Cleaning Bottles:</strong> Choose concentrates or tablets and reuse your spray bottles to cut down on plastic packaging.</li>
+          
+          <li><strong>LED Light Bulbs:</strong> These use up to 80% less energy and last much longer than incandescent bulbs — better for the planet and your wallet.</li>
+          
+          <li><strong>Compost Bin for Food Scraps:</strong> Divert organic waste from landfills and create nutrient-rich soil for your plants.</li>
+          
+          <li><strong>Cloth Napkins Instead of Paper:</strong> Stylish, reusable, and waste-free — cloth napkins elevate your meals and save trees.</li>
+          
+          <li><strong>Shampoo & Conditioner Bars:</strong> Ditch plastic bottles and go for solid bars that last longer and take up less space.</li>
+          
+          <li><strong>Reusable Cotton Rounds:</strong> Ideal for makeup removal or toner — these can be washed and reused hundreds of times.</li>
+          
+          <li><strong>Eco-Friendly Laundry Detergent:</strong> Look for biodegradable options with minimal or compostable packaging.</li>
+          
+          <li><strong>Reusable Shopping Bags:</strong> Keep a foldable tote or two in your bag or car so you’re always prepared at checkout.</li>
+          
+          <li><strong>Water Filter Pitcher or Bottle:</strong> Instead of buying bottled water, invest in a filter for cleaner, plastic-free hydration.</li>
+        </ol>
+
+        <p>These easy swaps not only reduce your environmental footprint but often save money in the long run. Start with one or two, and build from there — every step counts toward a more sustainable lifestyle!</p>
+        <p><strong>Materials Matter:</strong> Natural fibers like organic cotton, linen, hemp, and Tencel are biodegradable and use fewer resources to produce. Avoid synthetic fabrics like polyester and nylon, which shed microplastics when washed.</p>
+<p><strong>Watch Out for Greenwashing:</strong> Just because a brand says it’s sustainable doesn’t make it true. Look for third-party certifications and transparency around production practices. Dig deeper into brand values and impact reports when available.</p>
+<p>Fashion should empower—not exploit. With every intentional purchase, you can help shape a more just, beautiful, and sustainable world. Remember: the most sustainable garment is the one already in your closet.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 2 -->
+<div class="modal fade" id="modalBlog2" tabindex="-1" aria-labelledby="modalBlog2Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalBlog2Label">Sustainable Fashion 101</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>The fashion industry is one of the largest polluters in the world, but there's hope. By shifting how and where we shop, we can drastically reduce our wardrobe’s environmental impact. Here’s your introduction to sustainable fashion.</p>
+
+        <p><strong>What is Sustainable Fashion?</strong> It’s a movement and process that fosters change in fashion products and the fashion system toward greater ecological integrity and social justice. It means choosing clothes that are ethically made, environmentally friendly, and built to last.</p>
+
+        <p><strong>Where to Begin:</strong></p>
+        <ul>
+          <li><strong>Buy Less, Choose Well:</strong> Quality over quantity is key.</li>
+          <li><strong>Second-Hand First:</strong> Thrift stores, vintage shops, and online marketplaces are treasure troves.</li>
+          <li><strong>Support Ethical Brands:</strong> Look for brands with transparent supply chains, fair wages, and low-impact materials.</li>
+          <li><strong>Care and Repair:</strong> Extend the life of your clothes with proper care, mending, and upcycling.</li>
+        </ul>
+
+        <p>Sustainable fashion is not about perfection—it's about progress. Every conscious choice makes a difference.</p>
+        <p><strong>Materials Matter:</strong> Natural fibers like organic cotton, linen, hemp, and Tencel are biodegradable and use fewer resources to produce. Avoid synthetic fabrics like polyester and nylon, which shed microplastics when washed.</p>
+<p><strong>Watch Out for Greenwashing:</strong> Just because a brand says it’s sustainable doesn’t make it true. Look for third-party certifications and transparency around production practices. Dig deeper into brand values and impact reports when available.</p>
+<p>Fashion should empower—not exploit. With every intentional purchase, you can help shape a more just, beautiful, and sustainable world. Remember: the most sustainable garment is the one already in your closet.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 3 -->
+<div class="modal fade" id="modalBlog3" tabindex="-1" aria-labelledby="modalBlog3Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalBlog3Label">Composting at Home</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Composting is a simple, natural process that turns organic material into nutrient-rich soil. It’s a powerful way to reduce food waste and support a greener planet, right from your own kitchen or backyard.</p>
+
+        <p><strong>Why Compost?</strong> Food scraps and yard waste currently make up over 30% of what we throw away. When sent to landfills, they generate methane—a potent greenhouse gas. Composting returns valuable nutrients to the soil, reduces waste, and cuts emissions.</p>
+
+        <p><strong>How to Start:</strong></p>
+        <ul>
+          <li><strong>Greens:</strong> Veggie scraps, coffee grounds, tea bags.</li>
+          <li><strong>Browns:</strong> Cardboard, dry leaves, newspaper.</li>
+          <li><strong>Avoid:</strong> Meat, dairy, and oily foods—they attract pests and slow decomposition.</li>
+        </ul>
+
+        <p>Use a countertop bin or backyard pile, and stir occasionally to aerate. In a few weeks to months, you’ll have rich compost perfect for gardens, plants, and lawns.</p>
+
+        <p>Composting is easy to start and incredibly rewarding. You’ll waste less, grow more, and feel better knowing you’re helping the planet thrive.</p>
+        <p><strong>Indoor Composting Options:</strong> Don’t have a backyard? No problem. Try a countertop compost bin with carbon filters or a bokashi bucket system that ferments waste. Vermicomposting (worm bins) is another odor-free, compact solution ideal for apartments.</p>
+<p><strong>What to Do With Finished Compost:</strong> Use your compost in potted plants, gardens, or donate to local community gardens and green spaces. It's black gold for the soil, packed with nutrients to help plants thrive.</p>
+<p>Once you get into composting, it becomes second nature. It’s an empowering, earthy practice that reconnects you to natural cycles—and your scraps will never feel like waste again.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4 -->
+<div class="modal fade" id="modalBlog4" tabindex="-1" aria-labelledby="modalBlog4Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalBlog4Label">Greener Grocery Shopping</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+  <p>Grocery shopping is something we all do regularly—making it a powerful opportunity to reduce our environmental impact through small, consistent choices. With a bit of planning and awareness, your shopping habits can become a meaningful expression of your values.</p>
+  <p>From minimizing plastic to supporting ethical producers, here’s how to shop smarter and more sustainably:</p>
+  <ul>
+    <li><strong>Bring your own bags:</strong> Always carry reusable grocery bags, mesh produce bags, and jars or containers for bulk items. This simple step drastically cuts down on plastic waste over time.</li>
+    <li><strong>Buy in bulk:</strong> Stock up on dry goods like rice, beans, pasta, and spices from bulk bins using your own containers. It’s often cheaper and helps reduce unnecessary packaging.</li>
+    <li><strong>Shop local and seasonal:</strong> Choose fresh produce from farmers’ markets or local vendors. Seasonal food doesn’t require long-distance transport and is typically grown using fewer chemicals.</li>
+    <li><strong>Check labels:</strong> Look for certifications like USDA Organic, Fair Trade, or Rainforest Alliance to ensure the products you buy meet ethical and environmental standards.</li>
+    <li><strong>Support refill stations and zero-waste stores:</strong> Many stores now offer refillable options for items like oils, vinegar, and cleaning supplies. Embrace these innovative shopping experiences to avoid single-use plastics.</li>
+  </ul>
+  <p>Every grocery run is a chance to create change. By voting with your wallet, you help shape a market that favors sustainability, transparency, and care for the planet. Start small and stay consistent—your efforts matter.</p>
+  <p><strong>Plan Your Meals:</strong> Shopping with a list and a meal plan helps avoid impulse purchases and reduces food waste. Knowing what you need ensures you buy only what you’ll use.</p>
+<p><strong>Go Plant-Based More Often:</strong> Reducing your meat and dairy intake is one of the most impactful ways to lower your carbon footprint. Incorporate more legumes, grains, and seasonal produce into your meals.</p>
+<p>Shopping greener isn’t about perfection—it’s about progress. As more people make intentional grocery choices, the entire food system moves toward sustainability. Your cart is your voice—let it speak for the planet.</p>
+
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal 5 -->
+<div class="modal fade" id="modalBlog5" tabindex="-1" aria-labelledby="modalBlog5Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalBlog5Label">Low-Waste Travel Guide</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+  <p>Travel opens our eyes to new cultures, landscapes, and perspectives—but it also comes with an environmental cost. The good news is that you don’t have to give up exploring to be eco-conscious. With some planning, you can travel more responsibly while still enjoying every adventure.</p>
+  <p>Here are practical tips for embracing low-waste, sustainable travel:</p>
+  <ul>
+    <li><strong>Pack smart:</strong> Bring essentials like a stainless-steel water bottle, bamboo cutlery set, reusable straw, cloth napkin, and a tote bag. These simple tools help avoid disposables on the go.</li>
+    <li><strong>Choose low-waste toiletries:</strong> Ditch plastic bottles and switch to solid shampoo, conditioner bars, toothpaste tablets, and refillable containers. They're lighter, last longer, and eliminate unnecessary packaging.</li>
+    <li><strong>Stay green:</strong> Look for accommodations that are certified eco-friendly or practice sustainability, such as using renewable energy, conserving water, or composting waste.</li>
+    <li><strong>Reduce flights when possible:</strong> Travel by train, bus, or carpool when exploring nearby destinations. When flying is necessary, book non-stop flights and offset your carbon emissions through credible programs.</li>
+    <li><strong>Respect local ecosystems:</strong> Stay on trails, avoid single-use plastics, and don’t disturb wildlife. Responsible travel means leaving every place as you found it—or better.</li>
+  </ul>
+  <p>Sustainable travel doesn’t mean sacrificing comfort or experience—it means aligning your adventures with values that protect our planet. Whether you're hiking in nature or exploring a new city, traveling lightly ensures those places remain beautiful for years to come.</p>
+  <p><strong>Offset Your Carbon Footprint:</strong> Invest in certified carbon offset programs that support reforestation, renewable energy, or community-based environmental projects. Some airlines offer this option during booking.</p>
+<p><strong>Support Local Businesses:</strong> Choose local tour guides, eat at family-owned restaurants, and buy handmade goods. This not only enhances your cultural experience but also boosts the local economy sustainably.</p>
+<p>Mindful travel creates a ripple effect. By treading lightly and choosing with intention, you protect the planet while making your adventures even more meaningful. Explore, enjoy, and leave no trace.</p>
+
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal 6 -->
+<div class="modal fade" id="modalBlog6" tabindex="-1" aria-labelledby="modalBlog6Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalBlog6Label">DIY Eco-Friendly Cleaning</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+  <p>Cleaning your home shouldn’t mean exposing your family to harsh chemicals or filling your cabinets with plastic bottles. Fortunately, eco-friendly cleaning is easier than ever—and it starts with a few simple, affordable ingredients you likely already have at home.</p>
+  <p>Here’s how to create your own natural, non-toxic cleaners that work just as well as store-bought products—without the environmental toll:</p>
+  <ul>
+    <li><strong>All-purpose cleaner:</strong> Combine equal parts distilled white vinegar and water in a reusable spray bottle. Add lemon peels or a few drops of essential oil for a fresh scent. Perfect for counters, doorknobs, and bathroom surfaces.</li>
+    <li><strong>Glass and mirror spray:</strong> Mix 1 cup of water with 1 cup of vinegar and a tablespoon of rubbing alcohol. This streak-free formula shines mirrors and windows without ammonia or synthetic dyes.</li>
+    <li><strong>Scrubbing paste:</strong> For tough stains and grime, create a paste using baking soda and water. It’s gentle on surfaces but effective on tubs, tile grout, and stovetops.</li>
+    <li><strong>Natural disinfectant:</strong> Use hydrogen peroxide or mix distilled water with a few drops of tea tree oil or lavender essential oil. These ingredients have antimicrobial properties and leave a fresh, clean scent.</li>
+  </ul>
+  <p>Homemade cleaners are not only better for the planet—they’re also safer for pets, kids, and anyone with allergies or sensitivities. By making your own, you cut down on packaging waste, reduce indoor air pollution, and reclaim control over what goes into your home. Plus, DIY cleaning can even be fun and empowering!</p>
+  <p><strong>More Natural Ingredients to Try:</strong> Citrus peels, castile soap, and cornstarch all have cleaning superpowers. For instance, cornstarch can absorb grease from fabric or clean windows when mixed with vinegar and water.</p>
+<p><strong>Label and Store Your Cleaners:</strong> Reuse glass jars or spray bottles and label them with ingredients and the date made. Store in a cool, dry place for best results and safety.</p>
+<p>Cleaning can be creative! Try different essential oil blends (like lemon + eucalyptus or lavender + rosemary) for seasonal scents. You're not just cleaning your home—you’re caring for it with intention and love.</p>
+
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal 7 -->
+<div class="modal fade" id="modalBlog7" tabindex="-1" aria-labelledby="modalBlog7Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalBlog7Label">Sustainable Beauty Tips</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Our beauty routines can have a big environmental impact—from packaging waste to toxic ingredients and animal testing. But with a few mindful swaps, you can green your entire routine without compromising on quality or self-care.</p>
+
+        <h6>1. Choose Refillable & Low-Waste Packaging</h6>
+        <p>Brands like Kjaer Weis and Elate offer sleek refillable compacts and lipsticks. Opt for glass jars, aluminum tubes, or paper-based packaging whenever possible. These materials are easier to recycle or reuse compared to plastic.</p>
+
+        <h6>2. Support Cruelty-Free & Vegan Brands</h6>
+        <p>Look for certifications like Leaping Bunny or PETA-approved cruelty-free. Going one step further, choose vegan formulations that avoid animal-derived ingredients like beeswax or carmine.</p>
+
+        <h6>3. DIY When You Can</h6>
+        <p>Homemade face masks, scrubs, and hair treatments are surprisingly effective and customizable. A simple mix of oats, honey, and a splash of almond milk creates a soothing facial cleanser. Coffee grounds and coconut oil make an energizing body scrub.</p>
+
+        <h6>4. Simplify Your Routine</h6>
+        <p>Less is more. A minimalist routine reduces your product footprint and saves money. Look for multi-use products like tinted balms, shampoo bars that double as body wash, or oils that hydrate both skin and hair.</p>
+
+        <h6>5. Recycle Thoughtfully</h6>
+        <p>Check with local recycling programs for rules on cosmetic containers. TerraCycle also partners with brands to recycle hard-to-recycle items like mascara wands or lipstick tubes.</p>
+
+        <p>Embracing a sustainable beauty routine is about intentionality—choosing products that are gentle on both your skin and the planet. Beauty truly shines when it reflects care and consciousness.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal 8 -->
+<div class="modal fade" id="modalBlog8" tabindex="-1" aria-labelledby="modalBlog8Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalBlog8Label">Greener Kitchen Habits</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>The kitchen is one of the most resource-intensive rooms in the house—but it's also one of the easiest places to start making eco-friendly changes. From how you cook to how you clean, here’s how to green your kitchen for good:</p>
+
+        <h6>1. Rethink Food Storage</h6>
+        <p>Ditch plastic wrap for beeswax wraps, silicone lids, and reusable glass containers. These alternatives not only reduce waste but also preserve food better, minimizing spoilage.</p>
+
+        <h6>2. Eat Seasonally & Locally</h6>
+        <p>Shopping from local farmers' markets or joining a CSA (community-supported agriculture) program supports small growers and reduces the carbon footprint of your food. Seasonal eating also promotes variety and freshness.</p>
+
+        <h6>3. Reduce Food Waste</h6>
+        <p>Plan your meals ahead of time, freeze leftovers, and learn how to revive tired produce (e.g., soaking wilted greens in cold water). Consider storing veggie scraps in a freezer bag to make homemade broth.</p>
+
+        <h6>4. Upgrade to Energy-Efficient Appliances</h6>
+        <p>Look for ENERGY STAR-rated fridges, dishwashers, and ovens. Even small upgrades like induction cooktops or pressure cookers can drastically reduce energy use.</p>
+
+        <h6>5. Compost Like a Pro</h6>
+        <p>Whether you have a backyard bin, countertop composter, or participate in a local drop-off program, composting reduces methane emissions from landfills and creates nutrient-rich soil.</p>
+
+        <h6>6. Clean with Green Products</h6>
+        <p>Switch from harsh chemical cleaners to natural solutions. Vinegar, baking soda, and lemon can handle most messes. Or try DIY recipes for all-purpose spray and dish soap.</p>
+
+        <p>With a few mindful changes, your kitchen can become a hub of sustainability. It's not about perfection—just progression. Every habit counts toward a healthier home and planet.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal 9 -->
+<div class="modal fade" id="modalBlog9" tabindex="-1" aria-labelledby="modalBlog9Label" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalBlog9Label">Sustainable Gift Ideas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Gifting doesn’t have to come with guilt. With a little creativity and thoughtfulness, you can give presents that are kind to the Earth and deeply meaningful to the recipient. Here are some eco-conscious ideas that work for birthdays, holidays, or just-because moments:</p>
+
+        <h6>1. Gift Experiences</h6>
+        <p>Skip the stuff and gift a memory—cooking classes, hiking tours, wine tastings, or even a spa day. Experiences create joy without contributing to clutter or landfill waste.</p>
+
+        <h6>2. Choose Ethical, Eco-Friendly Brands</h6>
+        <p>Support small businesses or ethical brands that prioritize sustainability. Look for B Corp certification, Fair Trade practices, or transparent supply chains. Ideas include bamboo utensils, organic cotton apparel, or solar-powered gadgets.</p>
+
+        <h6>3. Go DIY & Handmade</h6>
+        <p>Handmade gifts are often the most heartfelt. Think: homemade candles in upcycled jars, bath salts in reusable tins, baked treats, or potted plants grown from seed. Personal touches show extra care.</p>
+
+        <h6>4. Give Zero-Waste Starter Kits</h6>
+        <p>Create custom bundles like a "zero-waste kitchen" with beeswax wraps, reusable towels, and bulk jars—or a "green travel kit" with a stainless water bottle, bamboo cutlery, and shampoo bars.</p>
+
+        <h6>5. Wrap Sustainably</h6>
+        <p>Traditional wrapping paper is often coated in plastic. Instead, use scarves (furoshiki), brown paper tied with twine, or reusable fabric bags. Even newspaper can be made chic with the right presentation.</p>
+
+        <h6>6. Donate in Their Name</h6>
+        <p>For the minimalist in your life, make a charitable donation to an environmental cause in their honor. It's a gift that keeps on giving.</p>
+
+        <p>Ultimately, sustainable gifting is about intention—giving something that brings joy while honoring the Earth. With a little thought, every gift can tell a story of care, creativity, and connection.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <section id="resources" class="container py-5">
+  <h2 class="section-title" data-aos="fade-up">Resources & Further Reading</h2>
+  <div class="card-section mb-4" data-aos="fade-up" data-aos-delay="100">
+    <p class="section-description">
+      Explore our thoughtfully curated collection of books, podcasts, documentaries, and websites that dive deeper into the world of sustainable living. Whether you're just starting your eco-journey or looking to deepen your knowledge, these trusted resources offer practical tips, inspiring stories, and expert insights to help you make more conscious choices every day.
+    </p>
+  </div>
+
+  <div class="row" data-aos="fade-up" data-aos-delay="200">
+<!-- Resource Card 1: Book -->
+<div class="col-md-4 mb-4">
+  <div class="card h-100 shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title">
+        <i class="bi bi-journal-bookmark me-2"></i>Book: <em>The Sustainable(ish) Living Guide</em>
+      </h5>
+      <p class="card-text small">
+        A practical and friendly guide by Jen Gale that shows how you can make a real impact with simple changes in everyday life—from food and fashion to travel and waste.
+      </p>
+      <a href="https://www.amazon.com/Sustainable-ish-Living-Guide-Everyday-Changes/dp/1472969128" target="_blank" class="btn btn-outline-success btn-sm mt-2">
+        <i class="bi bi-book"></i> View on Amazon
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Resource Card 2: Podcast -->
+<div class="col-md-4 mb-4">
+  <div class="card h-100 shadow-sm">
+    <div class="card-body">
+      <h5 class="card-title">
+        <i class="bi bi-headphones me-2"></i>Podcast: <em>Sustainable(ish)</em>
+      </h5>
+      <p class="card-text small">
+        Hosted by the author of the book, this podcast is full of honest, actionable conversations about low-impact living, featuring everyday people doing extraordinary eco things.
+      </p>
+      <a href="https://www.asustainablelife.co.uk/podcast.html" target="_blank" class="btn btn-outline-success btn-sm mt-2">
+        <i class="bi bi-play-btn"></i> Listen Online
+      </a>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Resource Card 3: Website -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title"><i class="bi bi-globe me-2"></i>Website: EarthHero</h5>
+          <p class="card-text small">
+            EarthHero is a one-stop shop for sustainable products and lifestyle tips. Their blog covers topics like zero waste swaps, ethical brands, and eco travel.
+          </p>
+          <a href="https://earthhero.com/blog/" target="_blank" class="btn btn-outline-success btn-sm mt-2">
+            <i class="bi bi-box-arrow-up-right"></i> Visit Blog
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="newsletter" class="container" data-aos="fade-up">
+  <h2 class="section-title">Get Our Newsletter</h2>
+  <div class="card-section">
+    <p class="section-description">Join our community and receive monthly tips, inspiration, and sustainable living news straight to your inbox!</p>
+    <form class="row g-3 mt-3">
+      <div class="col-md-8">
+        <input type="email" class="form-control" placeholder="Enter your email" required>
+      </div>
+      <div class="col-md-4">
+        <button type="submit" class="btn btn-primary w-100"><i class="bi bi-envelope-fill me-1"></i>Subscribe</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="container py-4" data-aos="zoom-in">
+  <div class="d-flex justify-content-center gap-3 flex-wrap">
+    <a href="#introduction" class="btn btn-primary"><i class="bi bi-info-circle me-1"></i>Intro</a>
+    <a href="#eco-home" class="btn btn-primary"><i class="bi bi-house-door me-1"></i>Home</a>
+    <a href="#green-fashion" class="btn btn-primary"><i class="bi bi-bag-heart me-1"></i>Fashion</a>
+    <a href="#diy-projects" class="btn btn-primary"><i class="bi bi-tools me-1"></i>DIY</a>
+    <a href="#resources" class="btn btn-primary"><i class="bi bi-book me-1"></i>Resources</a>
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2025 Sustainable Living. All rights reserved.</p>
+  </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const toggleBtn = document.querySelector('.dark-toggle');
+    const icon = toggleBtn.querySelector('i');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (navbarCollapse.classList.contains('show')) {
+          new bootstrap.Collapse(navbarCollapse).toggle();
+        }
+      });
+    });
+
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+      icon.classList.replace('bi-moon-fill', 'bi-brightness-high-fill');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const isDark = document.body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', isDark);
+      icon.classList.toggle('bi-moon-fill');
+      icon.classList.toggle('bi-brightness-high-fill');
+    });
+  });
+
+  window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+  document.addEventListener('DOMContentLoaded', () => {
+  const navLinks = document.querySelectorAll('.nav-link');
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+  const toggleBtn = document.querySelector('.dark-toggle');
+  const icon = toggleBtn?.querySelector('i');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (navbarCollapse.classList.contains('show')) {
+        new bootstrap.Collapse(navbarCollapse).toggle();
+      }
+    });
+  });
+
+  if (toggleBtn && icon) {
+    // Dark mode restore from localStorage
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+      icon.classList.replace('bi-moon-fill', 'bi-brightness-high-fill');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const isDark = document.body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', isDark);
+      icon.classList.toggle('bi-moon-fill');
+      icon.classList.toggle('bi-brightness-high-fill');
+    });
+  }
+});
+</script>
+<script>
+function calculateQuiz() {
+  const quiz = document.forms['sustainabilityQuiz'];
+  const score = ['meat', 'commute', 'clothes'].reduce((acc, name) => acc + parseInt(quiz[name].value), 0);
+  let message = '';
+
+  if (score <= 4) message = '🌱 You’re living very sustainably! Keep it up!';
+  else if (score <= 6) message = '♻️ You’re doing well—small changes can make a big difference!';
+  else message = '🚗 Consider ways to lower your environmental impact. Every step helps!';
+
+  document.getElementById('quizResult').innerText = message;
+}
+
+function calculateFootprint() {
+  const form = document.forms['footprintCalculator'];
+  const electricity = parseFloat(form['electricity'].value) || 0;
+  const miles = parseFloat(form['miles'].value) || 0;
+  const flights = parseFloat(form['flights'].value) || 0;
+
+  const kwhCO2 = electricity * 0.92;
+  const milesCO2 = miles * 0.89 * 4; // weekly to monthly
+  const flightsCO2 = flights * 110 / 12;
+
+  const total = kwhCO2 + milesCO2 + flightsCO2;
+  document.getElementById('calcResult').innerText = `🌍 Estimated Monthly CO₂ Output: ${total.toFixed(2)} kg`;
+}
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.querySelector('.dark-toggle');
+    const icon = toggleBtn?.querySelector('i');
+
+    if (localStorage.getItem('darkMode') === 'true') {
+      document.body.classList.add('dark-mode');
+      icon?.classList.replace('bi-moon-fill', 'bi-brightness-high-fill');
+    }
+
+    toggleBtn?.addEventListener('click', () => {
+      const isDark = document.body.classList.toggle('dark-mode');
+      localStorage.setItem('darkMode', isDark);
+      icon?.classList.toggle('bi-moon-fill');
+      icon?.classList.toggle('bi-brightness-high-fill');
+    });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
 </html>
